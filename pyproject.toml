@@ -1,0 +1,18 @@
+[project]
+name = "pybites-fastapi-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "ruff>=0.12.7",
+]
+#
+# the host happens to have ruff and pytest installed
+#
