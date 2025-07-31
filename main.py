@@ -1,6 +1,8 @@
-def main():
-    print("Hello from pybites-fastapi-template!")
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def index():
+    return {"Hello": "World"}
