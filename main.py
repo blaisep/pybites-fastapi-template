@@ -9,6 +9,6 @@ templates = Jinja2Templates(directory="templates")
 @app.api_route("/", methods=["GET", "POST"], response_class=HTMLResponse)
 def index(request: Request, input: str = Form(None)):
     if request.method == "GET":
-        return templates.TemplateResponse("index.html", {"request": request})
+        return templates.TemplateResponse(request, "index.html")
     else:
-        return templates.TemplateResponse("index.html", {"request": request, "input": input})
+        return templates.TemplateResponse(request, "index.html", {"input": input})
