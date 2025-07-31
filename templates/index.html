@@ -7,9 +7,6 @@
 </head>
 <body>
     <h1>Text converter</h1>
-    {% if input %}
-        <p>Converted text: <b>{{ input }}</b></p>
-    {% endif %}
     <form method="post" action="/">
         <div>
             <label for="input">Input text:</label>
@@ -19,5 +16,8 @@
             <button type="submit">Convert</button>
         </div>
     </form>
+    {% if input %}
+        <p>Converted text: <b>{{ input }}</b></p>
+    {% endif %}
 </body>
 </html>
